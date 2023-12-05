@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Bree Serif', sans-serif;
+            background-image: url('fundodocente.jpg');
+            /* Fundo produzido no Canva*/
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .registration-page {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .registration-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.7);
+            /* Fundo branco com transparência pra div*/
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+
+
+        h1 {
+            font-size: 24px;
+            color: #2e7d32;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            padding: 10px;
+            border: 3px solid #14631f;
+            border-radius: 20px;
+            font-size: 24px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #255827;
+            /* Tom mais escuro de verde ao passar o mouse */
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        a {
+            color: #2e7d32;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cadastro de Docente</title>
+</head>
+
+<body>
+    <div class="registration-page">
+        <div class="registration-container">
+            <h1> </h1>
+            <form method="POST" action="criardocente.php">
+                <label for="matricula">Siap:</label>
+                <input type="text" id="matricula" name="matricula" required>
+
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="curso">Curso:</label>
+                <select name="curso">
+                    <option value="informatica">Informática</option>
+                    <option value="meio_ambiente">Meio Ambiente</option>
+                    <option value="edificacoes">Edificações</label>
+                </select>
+
+                <input type="submit" name="enviar">Cadastrar</button>
+            </form>
+            <p>Já tem conta? <a href="paglogin.html">Clique aqui</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

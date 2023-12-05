@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <style>
+
+        body {
+            background-color: #f0f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #e8f4e5;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .checkbox-container {
+            margin: 10px 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="color: #2e8b57; text-align: center;">Requerimento</h2>
+        <form action="iseredadosform.php" method="POST">
+            <label for="data">Data</label>
+            <input type="date" id="data" name="data">
+            <label for="requerente">Requerente</label>
+            <input type="text" id="Requerente" name="requerente">
+
+            <div style="display: flex; justify-content: space-between;">
+                <div style="width: 48%;">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="endereco" name="endereco">
+                </div>
+                <div style="width: 48%;">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade">
+                </div>
+            </div>
+
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" name="telefone">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
+
+            <div style="display: flex; justify-content: space-between;">
+                <div style="width: 48%;">
+                    <label for="curso">Curso/turma</label>
+                    <input type="text" id="curso" name="curso">
+                </div>
+                <div style="width: 48%;">
+                    <label for="matricula">N° matrícula</label>
+                    <input type="text" id="matricula" name="matricula">
+                </div>
+            </div>
+
+            <label for="campus">Campus</label>
+            <input type="text" id="campus" name="campus">
+
+            <!-- Outros campos de preenchimento -->
+            
+            <div class="checkbox-container">
+                <p>Selecione os motivos:</p>
+                <label><input type="checkbox" name="motivo" value="Aproveitamento de Estudo"> Aproveitamento de Estudo</label> 
+                <label><input type="checkbox" name="motivo" value="Guia de Transferência"> Guia de Transferência</label>
+                <label><input type="checkbox" name="motivo" value="Guia de Transferência"> Aproveitamento de Experiência Anterior</label>
+                <label><input type="checkbox" name="motivo" value="Guia de Transferência"> Reintegração</label>
+                <label><input type="checkbox" name="motivo" value="Guia de Transferência"> Atividade Domiciliar</label>
+                <label><input type="checkbox" name="motivo" value="Guia de Transferência"> Revisão de Avaliação</label>
+                <label><input type="checkbox" name="motivo" value="Guia de Transferência"> Avaliação Relatório Final de Estágio</label>
+                <label><input type="checkbox" name="motivo" value="Guia de Transferência"> Segunda Chamada</label>
+                <label><input type="checkbox" name="motivo" value="Guia de Transferência"> Contestação de Resultado</label>
+                <label><input type="checkbox" name="motivo" value="Guia de Transferência"> Trancamento de Matrícula</label>
+                <label><input type="checkbox" name="motivo" value="Guia de Transferência"> Dispensa de Educação Física </label>
+                <label><input type="checkbox" name="motivo" value="Guia de Transferência"> Transferência</label>
+                <label><input type="checkbox" name="motivo" value="Guia de Transferência"> Desistência do curso</label>
+            </div>
+
+            <label for="observacoes">Informações complementares</label>
+            <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+
+
+            <label for="arquivo"></label>
+            <input type="file" id="arquivo" name="arquivo">
+
+            <input type="submit" value="Enviar" class="submit-btn">
+        </form>
+    </div>
+</body>
+</html>

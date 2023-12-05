@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <style>
+        body {
+            background-image: url('fundinho.jpg');
+            /* Página produzida no Canva para o layout da página. */
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .choice-page {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .choice-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.7);
+            /* Fundinho branco pra deixar transparência entre a div e o background*/
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            max-height: 300px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #2e7d32;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .category-button {
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .category-button:hover {
+            background-color: #255827;
+            /* Tom mais escuro de verde ao passar o mouse */
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Página de Escolha</title>
+</head>
+
+<body>
+    <div class="choice-page">
+        <div class="choice-container">
+            <h1>Escolha sua categoria</h1>
+            <div class="buttons">
+                <a href="cadastrodocente.html" class="category-button">Docente</a>
+                <a href="cadastrodiscente.html" class="category-button">Discente</a>
+                <p>Já tem conta? <a href="paglogin.html" style="color: #2e7d32;">Clique aqui</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
